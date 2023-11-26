@@ -27,6 +27,7 @@
     "gh-pages": "^6.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.1",
+    "react-scripts": "^5.0.1",
     "shortid": "^2.2.16"
   },
   "devDependencies": {
