@@ -7,7 +7,7 @@ const Footer = () => {
 
             <div className="footer-copyright">
                 <div className="container">
-                    <a className="grey-text text-lighten-4 right" >© 2023 Danil Kurmayev</a>
+                    <span className="grey-text text-lighten-4 right" >© 2023 Danil Kurmayev</span>
                 </div>
             </div>
         </footer>

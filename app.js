@@ -25,7 +25,8 @@ const PORT = config.get('port') || 5000;
 async function start() {
   try {
     await mongoose.connect(config.get('mongoUri'), {
-
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
     app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
     console.log('Connected to MongoDB');

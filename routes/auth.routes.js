@@ -7,17 +7,17 @@ const User = require('../models/User');
 const router = Router();
 
 router.post(
-    '/register',// middleware
+    '/register',
     [
-        check('email', 'Incorrect email').isEmail(),//error message middleware
-        check('password', 'Minimum password length is 6 characters').isLength({min: 6})//error message middleware
+        check('email', 'Incorrect email').isEmail(),
+        check('password', 'Minimum password length is 6 characters').isLength({min: 6})
     ],
     async (req, res) => {
         try {
-            //console.log('Body', req.body)
+
             const errors = validationResult(req);
-            if (!errors.isEmpty()) {//if there are errors
-                return res.status(400).json({//return error message
+            if (!errors.isEmpty()) {
+                return res.status(400).json({
                     errors: errors.array(),
                     message: 'Incorrect registration data'
                 })
